@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoDev | Modern Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="Style.css" rel="stylesheet"></link>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Neo<span>Dev</span>.</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h4 class="mono text-info mb-3 reveal">HELLO, WORLD!</h4>
+                    <h1 class="hero-title reveal delay-100">I Create <br><span class="gradient-text" id="typewriter">Digital Experiences</span></h1>
+                    <p class="lead text-muted mb-4 reveal delay-200">
+                        A modern Front-End Developer specializing in building exceptional digital interfaces with Neo-brutalism aesthetics and smooth interactions.
+                    </p>
+                    <div class="mt-4 reveal delay-300">
+                        <a href="#portfolio" class="btn-neon">View Work</a>
+                        <a href="#contact" class="btn-outline-light">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block reveal delay-300">
+                    <!-- Abstract Visual representation using CSS -->
+                    <div style="position: relative; width: 100%; height: 400px; display: flex; justify-content: center; align-items: center;">
+                        <div style="width: 300px; height: 300px; border: 2px solid var(--neon-purple); border-radius: 20px; position: absolute; animation: float 6s infinite ease-in-out;"></div>
+                        <div style="width: 280px; height: 280px; background: url('https://picsum.photos/seed/neo1/400/400.jpg') center/cover; border-radius: 20px; position: absolute; opacity: 0.8; filter: grayscale(100%); mix-blend-mode: luminosity;"></div>
+                        <div style="width: 50px; height: 50px; background: var(--neon-cyan); border-radius: 50%; position: absolute; top: -20px; right: 40px; box-shadow: 0 0 20px var(--neon-cyan);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0 reveal">
+                    <div class="section-title">About Me</div>
+                    <p class="text-muted mb-4">
+                        I am a passionate creative developer based in the digital realm. I blend technical expertise with artistic vision to create websites that are not just functional, but memorable.
+                    </p>
+                    <p class="text-muted">
+                        My stack includes HTML5, CSS3, JavaScript, and modern frameworks like Bootstrap and React. I love experimenting with Neo-colors and scroll transitions.
+                    </p>
+                    
+                    <div class="mt-4">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>HTML/CSS/JS</span>
+                                <span class="mono">95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Bootstrap/UI Design</span>
+                                <span class="mono">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span>Animation/Motion</span>
+                                <span class="mono">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-200">
+                    <!-- Stats Grid -->
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="skill-card text-center">
+                                <h2 class="gradient-text mb-0">05+</h2>
+                                <p class="mono text-muted mt-2">Years Exp.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="skill-card text-center">
+                                <h2 class="gradient-text mb-0">120+</h2>
+                                <p class="mono text-muted mt-2">Projects</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="skill-card text-center">
+                                <h2 class="gradient-text mb-0">40+</h2>
+                                <p class="mono text-muted mt-2">Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="skill-card text-center">
+                                <h2 class="gradient-text mb-0">24/7</h2>
+                                <p class="mono text-muted mt-2">Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-darker">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title">My Services</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal delay-100">
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h4>Web Development</h4>
+                        <p class="text-muted mt-3">Building responsive, fast, and secure websites using the latest technologies and best practices.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-200">
+                    <div class="skill-card">
+                        <i class="fas fa-paint-brush skill-icon" style="color:var(--neon-pink)"></i>
+                        <h4>UI/UX Design</h4>
+                        <p class="text-muted mt-3">Crafting intuitive and aesthetically pleasing interfaces with a focus on user experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-300">
+                    <div class="skill-card">
+                        <i class="fas fa-rocket skill-icon" style="color:var(--neon-cyan)"></i>
+                        <h4>SEO & Performance</h4>
+                        <p class="text-muted mt-3">Optimizing web applications to rank higher and load faster for better engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+            
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4 reveal delay-100">
+                    <div class="portfolio-item">
+                        <img src="https://picsum.photos/seed/cyber1/600/400" alt="Project 1" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">Neon Dashboard</h5>
+                            <span class="portfolio-cat mono">Web App</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4 reveal delay-200">
+                    <div class="portfolio-item">
+                        <img src="https://picsum.photos/seed/cyber2/600/400" alt="Project 2" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">Crypto Landing</h5>
+                            <span class="portfolio-cat mono">Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4 reveal delay-300">
+                    <div class="portfolio-item">
+                        <img src="https://picsum.photos/seed/cyber3/600/400" alt="Project 3" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">E-Commerce Future</h5>
+                            <span class="portfolio-cat mono">Shopify</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 4 -->
+                 <div class="col-md-6 col-lg-4 reveal delay-100">
+                    <div class="portfolio-item">
+                        <img src="https://picsum.photos/seed/cyber4/600/400" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">AI Chat Interface</h5>
+                            <span class="portfolio-cat mono">SaaS</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 5 -->
+                 <div class="col-md-6 col-lg-4 reveal delay-200">
+                    <div class="portfolio-item">
+                        <img src="https://picsum.photos/seed/cyber5/600/400" alt="Project 5" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">Portfolio v1</h5>
+                            <span class="portfolio-cat mono">Branding</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 6 -->
+                 <div class="col-md-6 col-lg-4 reveal delay-300">
+                    <div class="portfolio-item">
+                        <img src="https://picsum.photos/seed/cyber6/600/400" alt="Project 6" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">Neon Music</h5>
+                            <span class="portfolio-cat mono">Audio Visualizer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-darker">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-box reveal">
+                        <div class="text-center mb-5">
+                            <h2 class="section-title">Get In Touch</h2>
+                            <p class="text-muted">Have a project in mind? Let's build something awesome together.</p>
+                        </div>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject">
+                            <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                            <div class="text-center">
+                                <button type="submit" class="btn-neon w-50">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2023 NeoDev Portfolio. Designed with <i class="fas fa-heart" style="color:var(--neon-pink)"></i> & Bootstrap 5.</p>
+            <div class="mt-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="custom-toast">Message Sent Successfully!</div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="Code.js"></script>
+</body>
+</html>
