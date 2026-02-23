@@ -89,8 +89,17 @@ function scrollToSection(index) {
 window.addEventListener("wheel", function (e) {
     if (isScrolling) return;
 
-    // CRITICAL FIX: Allow scrolling inside tables
-    // If the mouse is hovering over a table, do NOT hijack scroll
+    // --- FIX: Allow normal scrolling ONLY for Education section ---
+    // Check if we are currently in the Education block
+    const currentBlock = sections[currentSection];
+    
+    // If ID matches "Education", we return immediately so the browser handles scrolling naturally
+    if (currentBlock.id === "Education") {
+        return; 
+    }
+    // -----------------------------------------------------------
+
+    // If mouse is hovering over a table, also allow natural scrolling
     if (e.target.closest('.table-responsive')) return;
 
     if (e.deltaY > 0) {
@@ -101,36 +110,30 @@ window.addEventListener("wheel", function (e) {
     scrollToSection(currentSection);
 }, { passive: true });
 
-document.addEventListener("keydown", function (e) {
-    if (isScrolling) return;
-    if (e.key === "ArrowDown") {
-        e.preventDefault(); currentSection++; scrollToSection(currentSection);
-    }
-    if (e.key === "ArrowUp") {
-        e.preventDefault(); currentSection--; scrollToSection(currentSection);
-    }
-});
-
-
 // --- 5. FORM VALIDATION & HANDLING ---
 const contactForm = document.getElementById('contactForm');
 const toast = document.getElementById('custom-toast');
 
-if(contactForm) {
+if(contactForm && toast) {
     contactForm.addEventListener('submit', (e) => {
         if (!contactForm.checkValidity()) {
-            e.preventDefault(); e.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
             contactForm.classList.add('was-validated');
         } else {
-            e.preventDefault();
-            toast.className = "show";
-            contactForm.reset();
-            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
-            contactForm.classList.remove('was-validated');
+            e.preventDefault(); // prevent default to show toast first
+            toast.classList.add("show");
+
+            // submit the form AFTER a short delay so the user sees the toast
+            setTimeout(() => {
+                contactForm.submit();      // actually send to Formspree
+                contactForm.reset();       // reset form after submission
+                toast.classList.remove("show");
+                contactForm.classList.remove('was-validated');
+            }, 500); // 0.5s delay
         }
     });
 }
-
 // --- 6. NAVBAR GLASS EFFECT ---
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {

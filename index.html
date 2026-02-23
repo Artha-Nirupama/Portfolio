@@ -329,8 +329,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4 reveal delay-100">
                     <div class="portfolio-item">
-                        <!-- Placeholder for Logo.png -->
-                        <div class="portfolio-img image-placeholder"><i class="fas fa-school fa-3x"></i></div>
+                        <div class="portfolio-img"><img src="Logo.png" alt="Logo"></div>
                         <div class="portfolio-overlay">
                             <h5 class="portfolio-title">School Management System</h5>
                             <span class="portfolio-cat mono">Desktop application with Python</span>  
@@ -340,8 +339,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 reveal delay-100">
                     <div class="portfolio-item">
-                        <!-- Placeholder for newLogo.png -->
-                        <div class="portfolio-img image-placeholder"><i class="fas fa-user-graduate fa-3x"></i></div>
+                        <div class="portfolio-img"><img src="newLogo.png" alt="New Logo"></div>
                         <div class="portfolio-overlay">
                             <h5 class="portfolio-title">Student Management System</h5>
                             <span class="portfolio-cat mono">Desktop application with Python</span>  
@@ -351,19 +349,17 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 reveal delay-100">
                     <div class="portfolio-item">
-                        <!-- Placeholder for Untitled-1.png -->
-                        <div class="portfolio-img image-placeholder"><i class="fas fa-laptop-code fa-3x"></i></div>
+                        <div class="portfolio-img"><img src="Untitled-1.png" alt="Untitled-1"></div>
                         <div class="portfolio-overlay">
                             <h5 class="portfolio-title">Student Management System</h5>
                             <span class="portfolio-cat mono">Desktop application with C#</span>  
-                            <span class="portfolio-cat mono">(MS SQL Server)</span>
+                            <span class="portfolio-cat mono">(Visual Studio+MS SQL Server)</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 reveal delay-200">
                     <div class="portfolio-item">
-                        <!-- Placeholder for Ecologo.png -->
-                        <div class="portfolio-img image-placeholder"><i class="fas fa-leaf fa-3x"></i></div>
+                        <div class="portfolio-img"><img src="Ecologo.png" alt="Eco Logo"></div>
                         <div class="portfolio-overlay">
                             <h5 class="portfolio-title">EcoXplore Adventure Website</h5>
                             <span class="portfolio-cat mono">Responsive Website</span>
@@ -373,10 +369,10 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 reveal delay-300">
                     <div class="portfolio-item">
-                        <img src="https://picsum.photos/seed/cyber3/600/400" alt="Project 3" class="portfolio-img">
+                        <div class="portfolio-img"><img src="Network.jpg" alt="Project 3"></div>
                         <div class="portfolio-overlay">
-                            <h5 class="portfolio-title">E-Commerce Future</h5>
-                            <span class="portfolio-cat mono">Shopify</span>
+                            <h5 class="portfolio-title">Network for 3 story building</h5>
+                            <span class="portfolio-cat mono">Cisco Packet Tracer + MS Visio</span>
                         </div>
                     </div>
                 </div>
@@ -394,17 +390,18 @@
                             <h2 class="section-title">Get In Touch</h2>
                             <p class="text-secondary">Let's build something awesome together.</p>
                         </div>
-                        <form id="contactForm" class="needs-validation" novalidate>
+                        <form id="contactForm" class="needs-validation" novalidate action="https://formspree.io/f/xjgeppkl"
+                        method="POST">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                             </div>
-                            <input type="text" class="form-control" placeholder="Subject">
-                            <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            <textarea  name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                             <div class="text-center">
                                 <button type="submit" class="btn-neon w-50">Send Message</button>
                             </div>
@@ -418,8 +415,9 @@
     <!-- Footer -->
     <footer id="Social_Media" class="text-center py-4 border-top">
         <div class="col-12 d-flex justify-content-center gap-3 flex-wrap mb-3 reveal">
-            <a class="btn btn-outline-primary mx-2 Card" href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a class="btn btn-outline-primary mx-2 Card" href="https://www.facebook.com/share/14Yx3UiyzhT/" target="_blank"><i class="bi bi-facebook"></i></a>
             <a class="btn btn-outline-success mx-2 Card" href="https://wa.me/94755804230" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a class="btn btn-outline-dark mx-2 Card" href="https://github.com/Artha-Nirupama" target="_blank"><i class="bi bi-github"></i></a>
             <a class="btn btn-outline-warning mx-2 Card" href="#" target="_blank"><i class="bi bi-instagram"></i></a>
             <a class="btn btn-outline-secondary mx-2 Card" href="#" target="_blank"><i class="bi bi-x"></i></a>
             <a class="btn btn-outline-danger mx-2 Card" href="#" target="_blank"><i class="bi bi-youtube"></i></a>
