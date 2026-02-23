@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoDev | Modern Portfolio</title>
+    <title>Artha's | Modern Portfolio</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +11,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <!--icons inport-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <link href="Style.css" rel="stylesheet"></link>
 
@@ -20,7 +25,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">Neo<span>Dev</span>.</a>
+            <a class="navbar-brand" href="#">G.M.<span>Artha</span>Nirupama</a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,6 +33,7 @@
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Work</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -37,28 +43,39 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="hero" class="block">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <h4 class="mono text-info mb-3 reveal">HELLO, WORLD!</h4>
-                    <h1 class="hero-title reveal delay-100">I Create <br><span class="gradient-text" id="typewriter">Digital Experiences</span></h1>
-                    <p class="lead text-muted mb-4 reveal delay-200">
-                        A modern Front-End Developer specializing in building exceptional digital interfaces with Neo-brutalism aesthetics and smooth interactions.
-                    </p>
+                    <h4 class="mono text-info mb-3 reveal">HELLO, I'm Artha!</h4>
+                    
+                    <!-- GLITCH TEXT -->
+                    <h1 class="hero-title reveal delay-100">
+                        <div class="glitch-wrapper">
+                            <div class="glitch" data-text="I CREATE">I CREATE</div>
+                        </div>
+                        <br>
+                        <span class="gradient-text" id="typewriter">Digital Experiences</span>
+                    </h1>
+
+                    <p class="lead mb-4 reveal delay-200 text-secondary">
+                        I design and develop intelligent software solutions powered by Python and robust database systems. 
+                        With a strong foundation in networking and system architecture, I create secure and scalable applications.                    </p>
                     <div class="mt-4 reveal delay-300">
-                        <a href="#portfolio" class="btn-neon">View Work</a>
-                        <a href="#contact" class="btn-outline-light">Contact Me</a>
+                        <a href="#portfolio" class="btn btn-neon">View Work</a>
+                        <a href="#contact" class="btn btn-outline-light">Contact Me</a>
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-block reveal delay-300">
-                    <!-- Abstract Visual representation using CSS -->
                     <div style="position: relative; width: 100%; height: 400px; display: flex; justify-content: center; align-items: center;">
                         <div style="width: 300px; height: 300px; border: 2px solid var(--neon-purple); border-radius: 20px; position: absolute; animation: float 6s infinite ease-in-out;"></div>
-                        <div style="width: 280px; height: 280px; background: url('https://picsum.photos/seed/neo1/400/400.jpg') center/cover; border-radius: 20px; position: absolute; opacity: 0.8; filter: grayscale(100%); mix-blend-mode: luminosity;"></div>
+                        <!-- Placeholder for pro.jpeg -->
+                        <div class="image-placeholder" style="width: 280px; height: 280px; border-radius: 20px; position: absolute; opacity: 0.8; filter: grayscale(100%); mix-blend-mode: luminosity;">
+                            <img src="pro.jpeg" alt="Profile Image" class="w-100 h-100 object-fit-cover rounded-3">
+                        </div>
                         <div style="width: 50px; height: 50px; background: var(--neon-cyan); border-radius: 50%; position: absolute; top: -20px; right: 40px; box-shadow: 0 0 20px var(--neon-cyan);"></div>
                     </div>
                 </div>
@@ -67,73 +84,65 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="block">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0 reveal">
                     <div class="section-title">About Me</div>
-                    <p class="text-muted mb-4">
-                        I am a passionate creative developer based in the digital realm. I blend technical expertise with artistic vision to create websites that are not just functional, but memorable.
-                    </p>
-                    <p class="text-muted">
-                        My stack includes HTML5, CSS3, JavaScript, and modern frameworks like Bootstrap and React. I love experimenting with Neo-colors and scroll transitions.
+                    <p class="text-secondary mb-4">
+                        I specialize in Python, databases, and networking, developing secure, data-driven applications using Python
+                        with PyQt5, MySQL, MS SQL, and SQLite. I focus on building reliable backend systems with strong data management and integration.</p>
+                    <p class="text-secondary">
+                        Alongside this, I use HTML, CSS, JavaScript, and Bootstrap to design clean, responsive interfaces that effectively support and enhance the core system functionality.
                     </p>
                     
                     <div class="mt-4">
                         <div class="mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>HTML/CSS/JS</span>
-                                <span class="mono">95%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar skill-progress" data-width="95%"></div>
-                            </div>
+                            <div class="d-flex justify-content-between"><span>HTML/ CSS/ JS</span><span class="mono">95%</span></div>
+                            <div class="progress"><div class="progress-bar skill-progress" data-width="95%"></div></div>
                         </div>
                         <div class="mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Bootstrap/UI Design</span>
-                                <span class="mono">90%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar skill-progress" data-width="90%"></div>
-                            </div>
+                            <div class="d-flex justify-content-between"><span>Bootstrap/UI Design</span><span class="mono">90%</span></div>
+                            <div class="progress"><div class="progress-bar skill-progress" data-width="90%"></div></div>
                         </div>
                         <div class="mb-3">
-                            <div class="d-flex justify-content-between">
-                                <span>Animation/Motion</span>
-                                <span class="mono">85%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar skill-progress" data-width="85%"></div>
-                            </div>
+                            <div class="d-flex justify-content-between"><span>Python+PyQt5</span><span class="mono">90%</span></div>
+                            <div class="progress"><div class="progress-bar skill-progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between"><span>MS SQL/ My SQL/ SQLite</span><span class="mono">85%</span></div>
+                            <div class="progress"><div class="progress-bar skill-progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between"><span>Networking</span><span class="mono">40%</span></div>
+                            <div class="progress"><div class="progress-bar skill-progress" data-width="40%"></div></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 reveal delay-200">
-                    <!-- Stats Grid -->
                     <div class="row g-4">
                         <div class="col-6">
                             <div class="skill-card text-center">
-                                <h2 class="gradient-text mb-0">05+</h2>
-                                <p class="mono text-muted mt-2">Years Exp.</p>
+                                <h2 class="gradient-text mb-0">02+</h2>
+                                <p class="mono text-secondary mt-2">Years Exp.</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="skill-card text-center">
-                                <h2 class="gradient-text mb-0">120+</h2>
-                                <p class="mono text-muted mt-2">Projects</p>
+                                <h2 class="gradient-text mb-0">20+</h2>
+                                <p class="mono text-secondary mt-2">Projects</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="skill-card text-center">
-                                <h2 class="gradient-text mb-0">40+</h2>
-                                <p class="mono text-muted mt-2">Clients</p>
+                                <h2 class="gradient-text mb-0">Student@</h2>
+                                <p class="mono text-secondary mt-2">ESOFT Metro Campus</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="skill-card text-center">
                                 <h2 class="gradient-text mb-0">24/7</h2>
-                                <p class="mono text-muted mt-2">Support</p>
+                                <p class="mono text-secondary mt-2">Support</p>
                             </div>
                         </div>
                     </div>
@@ -142,8 +151,124 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-darker">
+    <!-- Education -->
+    <section id="Education" class="block">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title">My Education</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Diploma in IT -->
+                <div class="timeline-item reveal delay-100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">30 April 2025</span>
+                        <h3>Level 3 Diploma in Information Technology</h3>
+                        <h5 class="text-secondary">Skills & Education Group Awards</h5>
+                        <p class="result-badge"><i class="fas fa-star"></i> Result:</p>
+                        <div class="table-responsive">
+                            <table class="edu-table">
+                                <tr><th>Award Unit Title</th><th>Credit</th><th>Grade</th></tr>
+                                <tr><td>Information Technology Concepts</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Enhancing Productivity with MS Office</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Computer Hardware</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Network Essentials</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Internet Email & Web Design</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Graphics and Multimedia</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Software Engineering</td><td>10</td><td>Distinction</td></tr>
+                                <tr><td>Programming with Python</td><td>10</td><td>Merit</td></tr>
+                                <tr><td>Databases with SQL</td><td>10</td><td>Merit</td></tr>
+                                <tr><td>Programming with C#</td><td>10</td><td>Merit</td></tr>
+                                <tr><td>Final Project</td><td>20</td><td>Distinction</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diploma in English -->
+                <div class="timeline-item reveal delay-200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">5 February 2025</span>
+                        <h3>Diploma in English</h3>
+                        <h5 class="text-secondary">ESOFT Metro Campus</h5>
+                        <p class="result-badge"><i class="fas fa-star"></i> Result:</p>
+                        <div class="table-responsive">
+                            <table class="edu-table">
+                                <tr><th>Module Code</th><th>Award Unit Title</th><th>Marks</th><th>Grade</th></tr>
+                                <tr><td>DIE-01</td><td>Online Exam (MCQ)</td><td>80</td><td>Distinction</td></tr>
+                                <tr><td>DIE-02</td><td>Reading and Writing</td><td>80</td><td>Distinction</td></tr>
+                                <tr><td>DIE-03</td><td>Presentation with viva</td><td>59</td><td>Pass</td></tr>
+                                <tr><td>DIE-04</td><td>Listening</td><td>90</td><td>Distinction</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GCE A/L -->
+                <div class="timeline-item reveal delay-300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">2023 (2024)</span>
+                        <h3>G.C.E Advanced Level Examination (8985189)</h3>
+                        <h5 class="text-secondary">AM/D. S. Senanayaka Maha Vidyalaya (National School),<br>Ampara</h5>
+                        <div class="mt-3 mb-2">
+                            <p class="result-badge"><i class="fas fa-star"></i>Result: 3-Passes</p>
+                            <span class="badge bg-dark border border-secondary me-1 mb-1">Index No : 8985189</span>
+                            <span class="badge bg-dark border border-secondary me-1 mb-1">Centre No : 1951</span>
+                            <span class="badge bg-dark border border-secondary me-1 mb-1">Stream : Bio-Science</span>
+                            <span class="badge bg-dark border border-secondary me-1 mb-1">Candidate Type : School</span>
+                            <span class="badge bg-dark border border-secondary mb-1">Qualified for Uni: Yes</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="edu-table">
+                                <tr><th>Subject</th><th>Grade</th><th>Medium</th><th>Competency</th><th>Z-Score</th><th>District</th></tr>
+                                <tr><td>01-Physics</td><td>C-Credit Pass</td><td>Sinhala</td><td>3</td><td rowspan="5">0.2294</td><td rowspan="5">Ampara</td></tr>
+                                <tr><td>02-Chemistry</td><td>C-Credit Pass</td><td>Sinhala</td><td>3</td></tr>
+                                <tr><td>09-Biology</td><td>S-Ordinary Pass</td><td>Sinhala</td><td>1</td></tr>
+                                <tr><td>Gen English</td><td>C-Credit Pass</td><td>English</td><td>-</td></tr>
+                                <tr><td>CGP</td><td>44</td><td>Sinhala</td><td>-</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GCE O/L -->
+                <div class="timeline-item reveal delay-400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">2020</span>
+                        <h3>G.C.E Ordinary Level Examination (65079710)</h3>
+                        <h5 class="text-secondary">Am/Gamini Maha Vidyalaya,<br>Ampara</h5>
+                        <div class="mt-3 mb-2">
+                            <p class="result-badge"><i class="fas fa-star"></i>Result: 9-Passes</p>
+                            <span class="badge bg-dark border border-secondary me-1 mb-1">7-Distinctions(A)</span>
+                            <span class="badge bg-dark border border-secondary me-1 mb-1">1-Very Good(B)</span>
+                            <span class="badge bg-dark border border-secondary mb-1">1-Ordinary(S)</span>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="edu-table">
+                                <tr><th>Subject</th><th>Medium</th><th>Grade</th><th>Assessment Level</th></tr>
+                                <tr><td>011-Buddhism</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>1</td></tr>
+                                <tr><td>021-Lang.&Lit(S)</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>1</td></tr>
+                                <tr><td>031-English</td><td>English</td><td>S-Ordinary-Pass</td><td>3</td></tr>
+                                <tr><td>032-Mathematics</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>3</td></tr>
+                                <tr><td>033-History</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>2</td></tr>
+                                <tr><td>034-Science</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>1</td></tr>
+                                <tr><td>043-Art</td><td>Sinhala</td><td>B-Very Good-Pass</td><td>1</td></tr>
+                                <tr><td>062-Civic Edu.</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>3</td></tr>
+                                <tr><td>081-AGR.FOO.TEC</td><td>Sinhala</td><td>A-Distinction-Pass</td><td>2</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="block">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <h2 class="section-title">My Services</h2>
@@ -151,59 +276,102 @@
             <div class="row g-4">
                 <div class="col-md-4 reveal delay-100">
                     <div class="skill-card">
-                        <i class="fas fa-code skill-icon"></i>
+                        <i class="fas fa-laptop skill-icon" style="color:var(--neon-cyan)"></i>
+                        <h4>Software Development</h4>
+                        <p class="text-secondary mt-3">Building responsive, fast, and secure application using the latest technologies(PyQt5 etc.).</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-100">
+                    <div class="skill-card">
+                        <i class="fas fa-network-wired skill-icon" style="color:var(--neon-purple)"></i>
+                        <h4>Networking</h4>
+                        <p class="text-secondary mt-3">Designing and implementing secure network infrastructures and protocols.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-100">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon" style="color:var(--neon-green)"></i>
+                        <h4>Database management</h4>
+                        <p class="text-secondary mt-3">Designing and managing databases with secure and efficient data handling.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal delay-100">
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon" style="color:var(--neon-cyan)"></i>
                         <h4>Web Development</h4>
-                        <p class="text-muted mt-3">Building responsive, fast, and secure websites using the latest technologies and best practices.</p>
+                        <p class="text-secondary mt-3">Building responsive, fast, and secure websites using the latest technologies.</p>
                     </div>
                 </div>
                 <div class="col-md-4 reveal delay-200">
                     <div class="skill-card">
-                        <i class="fas fa-paint-brush skill-icon" style="color:var(--neon-pink)"></i>
+                        <i class="fas fa-paint-brush skill-icon" style="color:var(--neon-blue)"></i>
                         <h4>UI/UX Design</h4>
-                        <p class="text-muted mt-3">Crafting intuitive and aesthetically pleasing interfaces with a focus on user experience.</p>
+                        <p class="text-secondary mt-3">Crafting intuitive interfaces with a focus on user experience.</p>
                     </div>
                 </div>
                 <div class="col-md-4 reveal delay-300">
                     <div class="skill-card">
-                        <i class="fas fa-rocket skill-icon" style="color:var(--neon-cyan)"></i>
-                        <h4>SEO & Performance</h4>
-                        <p class="text-muted mt-3">Optimizing web applications to rank higher and load faster for better engagement.</p>
+                        <i class="fas fa-rocket skill-icon" style="color:var(--neon-pink)"></i>
+                        <h4>Performance</h4>
+                        <p class="text-secondary mt-3">Optimizing web applications to load faster and engage better.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
+    <!-- Work -->
+    <section id="portfolio" class="block">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <h2 class="section-title">Featured Work</h2>
             </div>
-            
             <div class="row">
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-4 reveal delay-100">
+                <div class="col-md-6 col-lg-4 mb-4 reveal delay-100">
                     <div class="portfolio-item">
-                        <img src="https://picsum.photos/seed/cyber1/600/400" alt="Project 1" class="portfolio-img">
+                        <!-- Placeholder for Logo.png -->
+                        <div class="portfolio-img image-placeholder"><i class="fas fa-school fa-3x"></i></div>
                         <div class="portfolio-overlay">
-                            <h5 class="portfolio-title">Neon Dashboard</h5>
-                            <span class="portfolio-cat mono">Web App</span>
+                            <h5 class="portfolio-title">School Management System</h5>
+                            <span class="portfolio-cat mono">Desktop application with Python</span>  
+                            <span class="portfolio-cat mono">(PyQt5+SQLite3)</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-4 reveal delay-200">
+                <div class="col-md-6 col-lg-4 mb-4 reveal delay-100">
                     <div class="portfolio-item">
-                        <img src="https://picsum.photos/seed/cyber2/600/400" alt="Project 2" class="portfolio-img">
+                        <!-- Placeholder for newLogo.png -->
+                        <div class="portfolio-img image-placeholder"><i class="fas fa-user-graduate fa-3x"></i></div>
                         <div class="portfolio-overlay">
-                            <h5 class="portfolio-title">Crypto Landing</h5>
-                            <span class="portfolio-cat mono">Marketing</span>
+                            <h5 class="portfolio-title">Student Management System</h5>
+                            <span class="portfolio-cat mono">Desktop application with Python</span>  
+                            <span class="portfolio-cat mono">(PyQt5+MySQL)</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-4 reveal delay-300">
+                <div class="col-md-6 col-lg-4 mb-4 reveal delay-100">
+                    <div class="portfolio-item">
+                        <!-- Placeholder for Untitled-1.png -->
+                        <div class="portfolio-img image-placeholder"><i class="fas fa-laptop-code fa-3x"></i></div>
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">Student Management System</h5>
+                            <span class="portfolio-cat mono">Desktop application with C#</span>  
+                            <span class="portfolio-cat mono">(MS SQL Server)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 reveal delay-200">
+                    <div class="portfolio-item">
+                        <!-- Placeholder for Ecologo.png -->
+                        <div class="portfolio-img image-placeholder"><i class="fas fa-leaf fa-3x"></i></div>
+                        <div class="portfolio-overlay">
+                            <h5 class="portfolio-title">EcoXplore Adventure Website</h5>
+                            <span class="portfolio-cat mono">Responsive Website</span>
+                            <span class="portfolio-cat mono">(HTML5+CSS3+JavaScript+Bootstrap)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 reveal delay-300">
                     <div class="portfolio-item">
                         <img src="https://picsum.photos/seed/cyber3/600/400" alt="Project 3" class="portfolio-img">
                         <div class="portfolio-overlay">
@@ -212,51 +380,21 @@
                         </div>
                     </div>
                 </div>
-                 <!-- Project 4 -->
-                 <div class="col-md-6 col-lg-4 reveal delay-100">
-                    <div class="portfolio-item">
-                        <img src="https://picsum.photos/seed/cyber4/600/400" alt="Project 4" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h5 class="portfolio-title">AI Chat Interface</h5>
-                            <span class="portfolio-cat mono">SaaS</span>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Project 5 -->
-                 <div class="col-md-6 col-lg-4 reveal delay-200">
-                    <div class="portfolio-item">
-                        <img src="https://picsum.photos/seed/cyber5/600/400" alt="Project 5" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h5 class="portfolio-title">Portfolio v1</h5>
-                            <span class="portfolio-cat mono">Branding</span>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Project 6 -->
-                 <div class="col-md-6 col-lg-4 reveal delay-300">
-                    <div class="portfolio-item">
-                        <img src="https://picsum.photos/seed/cyber6/600/400" alt="Project 6" class="portfolio-img">
-                        <div class="portfolio-overlay">
-                            <h5 class="portfolio-title">Neon Music</h5>
-                            <span class="portfolio-cat mono">Audio Visualizer</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-darker">
+    <!-- Contact -->
+    <section id="contact" class="block bg-dark text-white">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-box reveal">
                         <div class="text-center mb-5">
                             <h2 class="section-title">Get In Touch</h2>
-                            <p class="text-muted">Have a project in mind? Let's build something awesome together.</p>
+                            <p class="text-secondary">Let's build something awesome together.</p>
                         </div>
-                        <form id="contactForm">
+                        <form id="contactForm" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Your Name" required>
@@ -278,15 +416,16 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p class="mb-0">&copy; 2023 NeoDev Portfolio. Designed with <i class="fas fa-heart" style="color:var(--neon-pink)"></i> & Bootstrap 5.</p>
-            <div class="mt-3">
-                <a href="#" class="text-white mx-2"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-dribbble"></i></a>
-            </div>
+    <footer id="Social_Media" class="text-center py-4 border-top">
+        <div class="col-12 d-flex justify-content-center gap-3 flex-wrap mb-3 reveal">
+            <a class="btn btn-outline-primary mx-2 Card" href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a class="btn btn-outline-success mx-2 Card" href="https://wa.me/94755804230" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a class="btn btn-outline-warning mx-2 Card" href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a class="btn btn-outline-secondary mx-2 Card" href="#" target="_blank"><i class="bi bi-x"></i></a>
+            <a class="btn btn-outline-danger mx-2 Card" href="#" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="py-2">
+            ©2026 Artha. All rights reserved.
         </div>
     </footer>
 
