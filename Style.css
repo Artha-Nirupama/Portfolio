@@ -123,13 +123,39 @@ h1, h2, h3, h4, h5, h6 { font-weight: 800; letter-spacing: -0.5px; }
 .hero-title {
     font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;
     background: linear-gradient(to right, #fff, #b4b4b4);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    --webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .gradient-text {
     background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    --webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-img-wrapper {
+    width: 280px;
+    height: 280px;
+    border: 2px solid var(--neon-purple);
+    border-radius: 20px;
+    overflow: hidden;
+    animation: float 6s infinite ease-in-out;
 }
 
+.hero-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+
+    .image-placeholder {
+        width: 220px !important;
+        height: 220px !important;
+    }
+}
 /* --- GLITCH --- */
 .glitch-wrapper { position: relative; display: inline-block; }
 .glitch {
@@ -286,16 +312,27 @@ h1, h2, h3, h4, h5, h6 { font-weight: 800; letter-spacing: -0.5px; }
 /* --- EDUCATION TABLES --- */
 .table-responsive {
     margin-top: 15px; border: 1px solid var(--glass-border); border-radius: 8px;
-    background: rgba(0, 0, 0, 0.2); overflow: hidden;
+    background: rgba(0, 0, 0, 0.2); /*overflow: hidden;*/
+    margin-top: 15px;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    overflow-x: auto;          /* important */
+    -webkit-overflow-scrolling: touch;
 }
+
 .edu-table {
     width: 100%; color: var(--text-main); border-collapse: collapse;
     margin-bottom: 0; font-size: 0.9rem;
+    min-width: 600px; /* forces horizontal scroll instead of breaking layout */
+    border-collapse: collapse;
 }
 .edu-table th {
+    position: sticky;
+    top: 0;
     background: rgba(188, 19, 254, 0.15); color: var(--neon-cyan);
     font-weight: 700; padding: 12px; border-bottom: 2px solid var(--neon-purple);
     text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.8rem;
+    z-index: 1;
 }
 .edu-table td {
     padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -346,6 +383,207 @@ footer {
     .hero-title { font-size: 2.5rem; }
     .section-title { font-size: 2rem; }
 }
+
+/* ===================================================== */
+/* ================= MOBILE RESPONSIVE ================= */
+/* ===================================================== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+
+    .hero-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .block {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+
+    .navbar {
+        background: var(--bg-card);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-link {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-dot {
+        left: 2px;
+    }
+}
+
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    body {
+        cursor: auto; /* Enable normal cursor on mobile */
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    #hero .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .btn-outline-light {
+        margin-left: 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    .portfolio-img {
+        height: 220px;
+    }
+
+    .contact-box {
+        padding: 2rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .btn-neon {
+        width: 100%;
+    }
+
+    footer .btn {
+        margin: 5px !important;
+    }
+
+    .edu-table {
+        font-size: 0.75rem;
+    }
+
+    .edu-table th,
+    .edu-table td {
+        padding: 8px;
+    }
+}
+
+
+/* Small Phones */
+@media (max-width: 576px) {
+
+    .hero-title {
+        font-size: 1.9rem;
+    }
+
+    .blob {
+        display: none; /* Hide heavy blur blobs for performance */
+    }
+
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .timeline-content:hover {
+        transform: none;
+    }
+
+    .portfolio-img {
+        height: 180px;
+    }
+
+    #custom-toast {
+        right: 10px;
+        bottom: 10px;
+        min-width: 200px;
+        font-size: 13px;
+    }
+
+    .contact-box {
+        padding: 1.5rem;
+    }
+}
+/* ================= EDUCATION MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .edu-table {
+        font-size: 0.75rem;
+        min-width: 500px;
+    }
+
+    .edu-table th {
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+
+    .edu-table td {
+        padding: 8px;
+    }
+
+    .result-badge {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    .edu-table {
+        font-size: 0.7rem;
+        min-width: 450px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: 2px;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
 /* --- MOBILE RESPONSIVE / MEDIA QUERIES --- */
 
 /* Tablets and Small Laptops (max 992px) */
