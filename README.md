@@ -49,19 +49,6 @@ The website is optimized for:
 - 💻 Desktop
 - 📱 Mobile
 - 📲 Tablet
-
----
-
-## 📂 Project Structportfolio/
-  │
-  ├── index.html
-  ├── css/
-  │ └── style.css
-  ├── js/
-  │ └── script.js
-  ├── assets/
-  │ └── images/
-  └── README.mdure
   
 ---
 
