@@ -346,3 +346,96 @@ footer {
     .hero-title { font-size: 2.5rem; }
     .section-title { font-size: 2rem; }
 }
+/* --- MOBILE RESPONSIVE / MEDIA QUERIES --- */
+
+/* Tablets and Small Laptops (max 992px) */
+@media (max-width: 992px) {
+    .hero-title { font-size: 3rem; }
+}
+
+/* Mobile Phones (max 768px) */
+@media (max-width: 768px) {
+    
+    /* 1. FIX CURSOR: Restore default cursor on touch devices */
+    body { 
+        cursor: auto !important; 
+        overflow-x: hidden;
+    }
+    .cursor-dot, .cursor-outline {
+        display: none; /* Hide custom cursor elements */
+    }
+
+    /* 2. FIX BLOCKS: Allow natural scrolling flow */
+    .block {
+        min-height: auto; /* Removes fixed 100vh height */
+        height: auto;
+        display: block; /* Removes flex centering which cuts off content */
+        padding: 60px 0; /* Adjust top padding */
+    }
+
+    /* 3. TYPOGRAPHY */
+    .hero-title { 
+        font-size: 2.2rem; /* Smaller font for mobile */
+        line-height: 1.2;
+    }
+    .section-title { 
+        font-size: 2rem; 
+        margin-bottom: 2rem;
+    }
+    h4 { font-size: 1.2rem; }
+
+    /* 4. TIMELINE ADJUSTMENTS (Education) */
+    .timeline { max-width: 100%; }
+    .timeline::before { left: 15px; } /* Move line closer to edge */
+    .timeline-item { 
+        padding-left: 45px; 
+        padding-right: 0;
+        margin-bottom: 25px;
+    }
+    .timeline-dot { left: 8px; } /* Adjust dot position */
+
+    /* 5. NAVBAR */
+    .navbar-brand { font-size: 1.2rem; }
+    .nav-link { font-size: 1rem; }
+    
+    /* 6. TABLES: Allow horizontal scroll */
+    .table-responsive {
+        overflow-x: auto !important; /* Important: Allows scrolling tables side-to-side */
+    }
+    .edu-table { 
+        font-size: 0.8rem; /* Smaller text for tables */
+    }
+    .edu-table th, .edu-table td {
+        padding: 8px;
+    }
+
+    /* 7. CONTACT & CARDS */
+    .contact-box { padding: 1.5rem; }
+    .skill-card { padding: 1.5rem; }
+    
+    /* 8. BUTTONS */
+    .btn-neon {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%; /* Full width buttons on mobile */
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    /* 9. PORTFOLIO */
+    .portfolio-item { margin-bottom: 20px; }
+    .portfolio-img {
+        max-height: 250px; /* Limit image height on mobile */
+    }
+}
+
+/* Very Small Phones (max 480px) */
+@media (max-width: 480px) {
+    .hero-title { font-size: 1.8rem; }
+    .navbar-brand { font-size: 1rem; }
+    .section-title { font-size: 1.5rem; }
+    
+    /* Timeline tightens further */
+    .timeline-item { padding-left: 35px; }
+    .timeline-dot { left: 6px; width: 12px; height: 12px; }
+}
