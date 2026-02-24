@@ -123,11 +123,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: 800; letter-spacing: -0.5px; }
 .hero-title {
     font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;
     background: linear-gradient(to right, #fff, #b4b4b4);
-    --webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .gradient-text {
     background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
-    --webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .hero-img-wrapper {
     width: 280px;
